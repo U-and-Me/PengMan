@@ -2,13 +2,13 @@
     position: relative;
 }
 #background{
-    height: 690px;
-    margin-left: 195px;
+    width: 1170px;
+    margin-left: 200px;
 }
 #logo{
     position: absolute;
-    left: 323px;
-    top: -65px;
+    margin-left: 323px;
+    margin-top: -90px;
     height: 500px;
 }
 #img-start{
