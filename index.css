@@ -11,3 +11,17 @@
     top: -65px;
     height: 500px;
 }
+#img-start{
+    position: absolute;
+    left: 390px;
+    bottom: 60px;
+    height: 200px;
+    width: 200px;
+}
+#img-help{
+    position: absolute;
+    left: 950px;
+    bottom: 60px;
+    height: 200px;
+    width: 200px;
+}
