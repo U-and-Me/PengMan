@@ -3,6 +3,7 @@
 }
 #background{
     width: 1170px;
+    height: 700px;
     margin-left: 200px;
 }
 #logo{
@@ -25,3 +26,10 @@
     height: 200px;
     width: 200px;
 }
+
+#img-start:hover{
+  transform: scale(1.1);
+}
+#img-help:hover{
+    transform: scale(1.1);
+  }
