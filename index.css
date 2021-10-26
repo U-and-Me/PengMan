@@ -1,0 +1,13 @@
+#wrapper{
+    position: relative;
+}
+#background{
+    height: 690px;
+    margin-left: 195px;
+}
+#logo{
+    position: absolute;
+    left: 323px;
+    top: -65px;
+    height: 500px;
+}
