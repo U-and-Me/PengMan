@@ -4,11 +4,11 @@
 #background{
     width: 1170px;
     height: 700px;
-    margin-left: 200px;
+    margin-left: 180px;
 }
 #logo{
     position: absolute;
-    margin-left: 323px;
+    margin-left: 328px;
     margin-top: -90px;
     height: 500px;
 }
@@ -32,4 +32,4 @@
 }
 #img-help:hover{
     transform: scale(1.1);
-  }
+}
