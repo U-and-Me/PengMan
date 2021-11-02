@@ -1,0 +1,54 @@
+#back{
+   position: relative; 
+}
+#background{
+    width: 900px;
+    margin-left: 170px;
+    opacity: 0.6;
+}
+#char{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    right: 990px;
+    top: -10px;   
+}
+#span{
+    position: absolute;
+    font-weight: 900;
+    font-size: 18px;
+    color: #004268;
+    right: 910px;
+    bottom: 510px;
+}
+#back_2{
+   position: relative; 
+}
+#draw{
+    position: absolute;
+    width: 370px;
+    margin-left: 680px;
+    top: -530px;
+}
+.warp{
+    
+    position: absolute;
+    margin-top: -240px;
+}
+.keyboard{
+    padding-left: 220px;
+    padding-bottom: 25px;
+    
+}
+.keyboard button{
+    background-color: white;
+    color: #004268;
+    font-weight: bold;
+    font-size: 19px;
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    border: 1px solid gray;
+    margin-left: 30px;
+   
+}
