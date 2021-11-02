@@ -1,9 +1,17 @@
 "use strict"
 
 function readTextFile(file){
-    let Wfile = new XMLHttpRequest();
-    Wfile.open("GET", "file", false);
-    Wfile.onreadystatechange = function(){
-        
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false); //e
+    rawFile.onreadystatechange = function(){
+        if(rawFile.readyState === 4){
+            if(rawFile.status === 200 || rawFile.status == 0){
+                var allText = rawFile.responseText;
+                console.log(allText);
+            }
+        }
     }
+    rawFile.send(null); //e
 }
+
+readTextFile("../wordList/color/Level1.txt");
