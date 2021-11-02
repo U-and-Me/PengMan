@@ -2,27 +2,34 @@
     position: relative;
 }
 #background{
-    width: 900px;
-    margin-left: 170px;
+    width: 1170px;
+    height: 700px;
+    margin-left: 180px;
 }
 #logo{
-    width: 800px;
     position: absolute;
-    margin-left: 220px;
-    margin-top: -100px;
-    height: 420px;
+    margin-left: 328px;
+    margin-top: -90px;
+    height: 500px;
 }
 #img-start{
     position: absolute;
-    left: 300px;
+    left: 390px;
     bottom: 60px;
     height: 200px;
     width: 200px;
 }
 #img-help{
     position: absolute;
-    left: 750px;
+    left: 950px;
     bottom: 60px;
     height: 200px;
     width: 200px;
+}
+
+#img-start:hover{
+  transform: scale(1.1);
+}
+#img-help:hover{
+    transform: scale(1.1);
 }
