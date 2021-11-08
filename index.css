@@ -2,29 +2,29 @@
     position: relative;
 }
 #background{
-    width: 1170px;
-    height: 700px;
-    margin-left: 180px;
+    width: 75%;
+    height: 55%;
+    margin-left: 13%;
 }
 #logo{
     position: absolute;
-    margin-left: 328px;
-    margin-top: -90px;
-    height: 500px;
+    margin-left: 22%;
+    margin-top: -5%;
+    height: 70%;
 }
 #img-start{
     position: absolute;
-    left: 390px;
-    bottom: 60px;
-    height: 200px;
-    width: 200px;
+    left: 27%;
+    bottom: 8%;
+    height: 27%;
+    width: 13%;
 }
 #img-help{
     position: absolute;
-    left: 950px;
-    bottom: 60px;
-    height: 200px;
-    width: 200px;
+    left: 62%;
+    bottom: 8%;
+    height: 27%;
+    width: 13%;
 }
 
 #img-start:hover{
