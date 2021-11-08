@@ -101,29 +101,38 @@ let Color_Lev3 = {
 
 let cur_level = 1; // 현재 레벨
 let list = ["", "", "", "", ""]; // 단어 배열
-let wordCount = 0;
+let wordCount = 0; // 단어 세기
+let Arr_word = []; // 제시 단어 넣기
+let Lev_Img = [3, 5, 6]; // 각 레벨 기회
+let imgAdd = 0; // 이미지 추가 수
+let Ans_Right = 0;
+let Ans_No = 0;
+
+// 레벨에 맞는 단어 5개 가져오기
+switch(cur_level){
+    case 1 : bringWords(Color_Lev1); break;
+    case 2 : bringWords(Color_Lev2); break;
+    case 3 : bringWords(Color_Lev3); break;
+}
 
 playGame();
 
 function playGame(){
-    // 레벨에 맞는 단어 5개 가져오기
-    switch(cur_level){
-        case 1 : bringWords(Color_Lev1); break;
-        case 2 : bringWords(Color_Lev2); break;
-        case 3 : bringWords(Color_Lev3); break;
-    }
-    // 5번 반복
-   /* while(wordCount < list.length){
-        // 첫번째 단어 잘라서 배열에 넣기
-        let Arr_word = [];
-        Arr_word = list[wordCount].toLowerCase().split('');
-        // 단어 순서대로 화면에 밑줄 긋기
-
+    // 첫번째 단어 잘라서 배열에 넣기
+    Arr_word = list[wordCount].toLowerCase().split('');
+    // 단어 순서대로 화면에 밑줄 긋기
         
-        // 그림이 완성되기 전에 맞추면 다음 단어 / 완성되면 게임 종료
-        // 기회 : 1 - 3번 2 - 5번 3 - 6번
-    }*/
+    // 그림이 완성되기 전에 맞추면 다음 단어
+    let word_len = list[wordCount].length; // 현재 단어 길이
+    if(Ans_Right == word_len && imgAdd < Lev_Img[cur_level - 1]){
+        wordCount++;
+    }
 
+    // 단어 5개를 모두 맞추면 다음 단계
+    if(wordCount == 5){
+        cur_level++;
+        playGame();
+    }
 }
 
 function bringWords(wordLists){
@@ -149,6 +158,35 @@ function bringWords(wordLists){
 
 // 입력받아서 맞으면 알파벳 추가 / 틀리면 그림 추가
 function checkAlpha(clicked_id){
-    let alpha = document.getElementById(clicked_id);
-    //alert(alpha);
+    let alpha = document.getElementById(clicked_id).value;
+    alpha = alpha.toLowerCase(); // 소문자로 변경
+
+    let word_len = list[wordCount].length; // 현재 단어 길이
+
+    alert(list);
+        
+    for(let i = 0; i < word_len; i++){
+        if(alpha == Arr_word[i]){ // 맞을 경우 밑줄 제거 후 알파벳 출력
+            Ans_Right++;
+            alert(alpha + "  " + Arr_word[i]);
+        }
+        Ans_No = 1;
+    }
+
+    if(Ans_No == 1){
+        Ans_No = 0;
+        // 그림 추가
+        imgAdd++;
+        alert(Lev_Img[cur_level-1]);
+        // 그림 체크
+        if(Lev_Img[cur_level-1] == imgAdd){
+             // 게임 종료
+            EndGame();
+        }
+    }
+
+}
+
+function EndGame(){
+    alert("🐧GameOver🐧");
 }
