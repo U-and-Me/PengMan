@@ -2,32 +2,33 @@
    position: relative; 
 }
 #background{
-    width: 900px;
-    margin-left: 170px;
+    width: 75%;
+    height: 55%;
+    margin-left: 13%;
     opacity: 0.6;
 }
 #char{
     position: absolute;
-    width: 100px;
-    height: 100px;
-    right: 990px;
-    top: -10px;   
+    width: 7%;
+    height: 14%;
+    left: 12%;
+    top: -2%;
 }
 #span{
     position: absolute;
-    font-weight: 900;
-    font-size: 18px;
+    font-weight: 1000;
+    font-size: 25px;
     color: #004268;
-    right: 910px;
-    bottom: 510px;
+    left: 18%;
+    top: 3%;
 }
 #back_2{
    position: relative; 
 }
 #draw{
     position: absolute;
-    width: 370px;
-    margin-left: 680px;
+    width: 30%;
+    margin-left: 55%;
     top: -530px;
 }
 .warp{
