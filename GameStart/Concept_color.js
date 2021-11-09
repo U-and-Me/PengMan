@@ -109,21 +109,29 @@ let Ans_Right = 0;
 let Ans_No = 0;
 
 // 레벨에 맞는 단어 5개 가져오기
-switch(cur_level){
-    case 1 : bringWords(Color_Lev1); break;
-    case 2 : bringWords(Color_Lev2); break;
-    case 3 : bringWords(Color_Lev3); break;
-}
+
 
 playGame();
 
 function playGame(){
+    switch(cur_level){
+        case 1 : bringWords(Color_Lev1); break;
+        case 2 : bringWords(Color_Lev2); break;
+        case 3 : bringWords(Color_Lev3); break;
+    }
     // 첫번째 단어 잘라서 배열에 넣기
     Arr_word = list[wordCount].toLowerCase().split('');
+
+    let word_len = list[wordCount].length; // 현재 단어 길이
+
     // 단어 순서대로 화면에 밑줄 긋기
+    for(let i = 0; i < word_len; i++){
+        var newSpan = document.createElement("span");
+        newSpan.innerText = "____ ";
+        document.body.appendChild(newSpan);
+    }
         
     // 그림이 완성되기 전에 맞추면 다음 단어
-    let word_len = list[wordCount].length; // 현재 단어 길이
     if(Ans_Right == word_len && imgAdd < Lev_Img[cur_level - 1]){
         wordCount++;
     }
@@ -148,11 +156,16 @@ function bringWords(wordLists){
     for(let i = 0; i < 5; i++){
         let index = Math.floor(Math.random() * wordLength);
         let name = CName[index];
-        for(let j = 0; j < i; j++){ // 중복 제거
-            if(list[j] === name) i--;
-            break;
-        }
+
         list[i] = mapL.get(name);
+
+        for(let j = 0; j < i; j++){ // 중복 제거
+            if(list[j] == list[i]){
+                i--;
+                break;
+            } 
+        }
+        
     }
 }
 
