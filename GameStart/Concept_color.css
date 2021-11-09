@@ -37,11 +37,13 @@
     margin-top: -240px;
 }
 .keyboard{
+    
     padding-left: 220px;
     padding-bottom: 25px;
     
 }
 .keyboard button{
+    position: absolute;
     background-color: white;
     color: #004268;
     font-weight: bold;
