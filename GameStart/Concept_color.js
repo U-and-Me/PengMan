@@ -126,8 +126,9 @@ function playGame(){
 
     // 단어 순서대로 화면에 밑줄 긋기
     for(let i = 0; i < word_len; i++){
-        var newSpan = document.createElement("span");
-        newSpan.innerText = "____ ";
+        var newSpan = document.createElement("img");
+        newSpan.setAttribute('src', '../img/underline.png');
+        newSpan.setAttribute('style', 'margin-bottom:-17%; margin-left:3%;');
         document.body.appendChild(newSpan);
     }
         
