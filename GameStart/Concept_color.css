@@ -6,6 +6,7 @@
     height: 55%;
     margin-left: 13%;
     opacity: 0.6;
+    
 }
 #char{
     position: absolute;
@@ -39,7 +40,7 @@
 }
 .keyboard{
     
-    padding-left: 220px;
+    padding-left: 200px;
     padding-bottom: 25px;
     
 }
