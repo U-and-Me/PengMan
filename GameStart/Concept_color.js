@@ -124,13 +124,12 @@ function playGame(){
 
     let word_len = list[wordCount].length; // 현재 단어 길이
 
+    var line = document.querySelector("#word_line");
     // 단어 순서대로 화면에 밑줄 긋기
     for(let i = 0; i < word_len; i++){
-        var newSpan = document.createElement("img");
-        newSpan.setAttribute('src', '../img/underline.png');
-        newSpan.setAttribute('style', 'margin-bottom:-17%; margin-left:3%;');
-        document.body.appendChild(newSpan);
+        line.innerHTML += '<img src="../img/underline.png" style=" margin-left:1%;"/>';
     }
+
         
     // 그림이 완성되기 전에 맞추면 다음 단어
     if(Ans_Right == word_len && imgAdd < Lev_Img[cur_level - 1]){
