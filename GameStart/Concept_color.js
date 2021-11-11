@@ -106,19 +106,33 @@ let Arr_word = []; // 제시 단어 넣기
 let Lev_Img = [3, 5, 6]; // 각 레벨 기회
 let imgAdd = 0; // 이미지 추가 수
 let Ans_Right = 0;
-let Ans_No = 0;
+let Ans_chk = 1;
+
+checkLev();
+
+// 단계 넘어가기 전 초기화
+function RemoveInfo(){
+    list = ["", "", "", "", ""];
+    wordCount = 0;
+    Arr_word = [];
+    imgAdd = 0;
+    Ans_Right = 0;
+    Arr_chk = 1;
+    checkLev();
+}
 
 // 레벨에 맞는 단어 5개 가져오기
-
-
-playGame();
-
-function playGame(){
+function checkLev(){
     switch(cur_level){
         case 1 : bringWords(Color_Lev1); break;
         case 2 : bringWords(Color_Lev2); break;
         case 3 : bringWords(Color_Lev3); break;
     }
+    playGame();
+}
+
+function playGame(){
+
     // 첫번째 단어 잘라서 배열에 넣기
     Arr_word = list[wordCount].toLowerCase().split('');
 
@@ -130,20 +144,10 @@ function playGame(){
         line.innerHTML += '<img src="../img/underline.png" style=" margin-left:1%;"/>';
     }
 
-        
-    // 그림이 완성되기 전에 맞추면 다음 단어
-    if(Ans_Right == word_len && imgAdd < Lev_Img[cur_level - 1]){
-        wordCount++;
-    }
-
-    // 단어 5개를 모두 맞추면 다음 단계
-    if(wordCount == 5){
-        cur_level++;
-        playGame();
-    }
 }
 
 function bringWords(wordLists){
+    
     let mapL = new Map(Object.entries(wordLists)); //  맵 변환
     let CName = new Array();
     let wordLength = 0;
@@ -176,30 +180,60 @@ function checkAlpha(clicked_id){
 
     let word_len = list[wordCount].length; // 현재 단어 길이
 
-    alert(list);
+    alert(list[wordCount]);
         
+    var line = document.querySelector("#word_line");
+    //line.img.remove();
+
     for(let i = 0; i < word_len; i++){
         if(alpha == Arr_word[i]){ // 맞을 경우 밑줄 제거 후 알파벳 출력
             Ans_Right++;
             alert(alpha + "  " + Arr_word[i]);
+            for(let j = 0; j < word_len; j++){
+                if(i == j) line.innerHTML += '<div style=" margin-left:1%;">'+Arr_word[i]+'</div>';
+                else line.innerHTML += '<div style=" margin-left:1%;"></div>';   
+            }
+            alert(Arr_word[i]);
+            Arr_word[i] = "";
+            Ans_chk = 0;
         }
-        Ans_No = 1;
+        /*else{
+            line.innerHTML += '<div style=" margin-left:1%;"></div>';            
+        }
+        */
     }
 
-    if(Ans_No == 1){
-        Ans_No = 0;
+    // 그림이 완성되기 전에 맞추면 다음 단어
+    if(Ans_Right == word_len && imgAdd < Lev_Img[cur_level - 1]){
+        wordCount++;
+        imgAdd = 0;
+        Ans_Right = 0; 
+        Arr_chk = 1;
+        playGame();
+    }
+
+    // 단어 5개를 모두 맞추면 다음 단계
+    if(wordCount == 5){
+        cur_level++;
+        prompt("다음 단계로 올라갑니다👩🏻‍🎨");
+        RemoveInfo();
+    }
+
+    if(Ans_chk == 1){
         // 그림 추가
         imgAdd++;
-        alert(Lev_Img[cur_level-1]);
+        alert(Lev_Img[cur_level-1] + "   " + imgAdd);
         // 그림 체크
         if(Lev_Img[cur_level-1] == imgAdd){
              // 게임 종료
-            EndGame();
+             gameOver();
         }
     }
-
+    Ans_chk = 1;
 }
 
-function EndGame(){
+function gameOver(){
     alert("🐧GameOver🐧");
+
+    // index.html로 돌아가기
 }
