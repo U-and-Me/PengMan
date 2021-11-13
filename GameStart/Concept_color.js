@@ -127,7 +127,7 @@ function playGame(){
     var line = document.querySelector("#word_line");
     // 단어 순서대로 화면에 밑줄 긋기
     for(let i = 0; i < word_len; i++){
-        line.innerHTML += '<img src="../img/underline.png" style=" margin-left:1%;"/>';
+        //line.innerHTML += '<img src="../img/underline.png" style=" margin-left:10px;"/>';
     }
 
         
