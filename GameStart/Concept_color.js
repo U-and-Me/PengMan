@@ -141,7 +141,7 @@ function playGame(){
     var line = document.querySelector("#word_line");
     // 단어 순서대로 화면에 밑줄 긋기
     for(let i = 0; i < word_len; i++){
-        //line.innerHTML += '<img src="../img/underline.png" style=" margin-left:10px;"/>';
+        line.innerHTML += '<img id="underline" src="../img/underline.png" style=" margin-left:1%;"/>';
     }
 
 }
@@ -182,16 +182,22 @@ function checkAlpha(clicked_id){
 
     alert(list[wordCount]);
         
-    var line = document.querySelector("#word_line");
-    //line.img.remove();
-
+    var line = document.querySelector("#word_line");  
+    // img 태그 삭제
+    /*var line_img = document.querySelector("#underline");
+    line_img.parentNode.removeChild(line_img);    
+*/
     for(let i = 0; i < word_len; i++){
         if(alpha == Arr_word[i]){ // 맞을 경우 밑줄 제거 후 알파벳 출력
             Ans_Right++;
             alert(alpha + "  " + Arr_word[i]);
             for(let j = 0; j < word_len; j++){
-                if(i == j) line.innerHTML += '<div style=" margin-left:1%;">'+Arr_word[i]+'</div>';
-                else line.innerHTML += '<div style=" margin-left:1%;"></div>';   
+                if(i == j) {
+                    line.innerHTML += '<span style=" margin-left:1%;">'+Arr_word[i]+'</span>';
+                }   
+                else{
+                    line.innerHTML += '<span style=" margin-left:1%;">'+"땡"+'</span>';   
+                }
             }
             alert(Arr_word[i]);
             Arr_word[i] = "";
@@ -206,9 +212,11 @@ function checkAlpha(clicked_id){
     // 그림이 완성되기 전에 맞추면 다음 단어
     if(Ans_Right == word_len && imgAdd < Lev_Img[cur_level - 1]){
         wordCount++;
+       // alert("pass  " + wordCount);
         imgAdd = 0;
         Ans_Right = 0; 
         Arr_chk = 1;
+        for(let i = 0; i < word_len; i++) Arr_word[i] = "";
         playGame();
     }
 
