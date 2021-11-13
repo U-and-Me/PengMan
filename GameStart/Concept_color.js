@@ -187,6 +187,7 @@ function checkAlpha(clicked_id){
     /*var line_img = document.querySelector("#underline");
     line_img.parentNode.removeChild(line_img);    
 */
+
     for(let i = 0; i < word_len; i++){
         if(alpha == Arr_word[i]){ // 맞을 경우 밑줄 제거 후 알파벳 출력
             Ans_Right++;

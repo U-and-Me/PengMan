@@ -28,11 +28,11 @@ body{
     left: 12%;
     top: 5%;
 }
-/*그림판*/
-#draw{
+/*마당그림판*/
+#yard{
     position: absolute;
-    width: 37%;
-    margin-left: 56%;
+    width: 41%;
+    margin-left: 52%;
     margin-top: -47%;
 }
 .warp{

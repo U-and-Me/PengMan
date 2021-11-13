@@ -1,20 +1,25 @@
-#wrapper{
-    position: relative;
+body{
+    margin: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
-#background{
-    width: 75%;
-    height: 55%;
-    margin-left: 13%;
+/*북극 배경*/
+#wrapper #background{
+    width: 100vw;
+    height: 100vh;
+}
+#wrapper{
+    position: absolute;
 }
 #logo{
     position: absolute;
-    margin-left: 22%;
+    margin-left: 20%;
     margin-top: -5%;
     height: 70%;
 }
 #img-start{
     position: absolute;
-    left: 27%;
+    left: 25%;
     bottom: 8%;
     height: 27%;
     width: 13%;
@@ -26,10 +31,8 @@
     height: 27%;
     width: 13%;
 }
-
 #img-start:hover{
     transform: scale(1.1);
 }
 #img-help:hover{
     transform: scale(1.1);
-}
