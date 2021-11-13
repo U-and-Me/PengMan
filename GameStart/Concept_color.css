@@ -1,66 +1,18 @@
 /*가로 스크롤바 없앰*/
-body{  
+/* body{  
     overflow-x: hidden;
     overflow-y: auto;
-}
-#back{
-   position: absolute; 
+} */
+body{
+    margin: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 /*북극 배경*/
 #background{
-    width: 73%;
-    height: 73%;
-    margin-left: 13%;
+    width: 100vw;
+    height: 100vh;
     opacity: 0.6;
     
 }
-/*상단 왼쪽 캐릭터*/
-#char{
-    position: absolute;
-    width: 7%;
-    height: 14%;
-    left: 13%;
-    top: -2%;
-}
-/*상단 글씨*/
-#span{
-    position: absolute;
-    font-weight: 1000;
-    width: 100%;
-    height: 100%;
-    color: #004268;
-    left: 19%;
-    top: 3%;
-}
-#back_2{
-   position: relative; 
-}
-/*그림판*/
-#draw{
-    position: absolute;
-    width: 29%;
-    margin-left: 55%;
-    margin-top: -43%;
-}
-.warp{
-    position: absolute;
-    margin-top: -240px;
-}
-.keyboard{
-    padding-left: 220px;
-    padding-bottom: 25px;
-    
-}
-/*키보드 버튼*/
-.keyboard button{
-    background-color: white;
-    color: #004268;
-    font-weight: bold;
-    font-size: 19px;
-    width: 50px;
-    height: 50px;
-    border-radius: 20px;
-    border: 1px solid gray;
-    margin-left: 32px;
-   
-}
+
