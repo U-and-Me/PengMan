@@ -114,8 +114,9 @@ checkLev();
 // 단계 넘어가기 전 초기화
 function RemoveInfo(){
     list = ["", "", "", "", ""];
+    list_right.fill("");
+    Arr_word.fill("");
     wordCount = 0;
-    Arr_word = [];
     imgAdd = 0;
     Ans_Right = 0;
     Arr_chk = 1;
@@ -124,23 +125,21 @@ function RemoveInfo(){
 
 // 다음 단어 넘어가기 전 초기화
 function RemoveNextW(){
-    // 밑줄 넣기
+    // 밑줄 삭제
     //alert("다음단계");
     var line = document.querySelector("#word_line");
     while(line.hasChildNodes()){
         line.removeChild(line.firstChild);
-    }
-
-    for(let i = 0; i < word_len; i++){
-        line.innerHTML += '<img id="underline" src="../img/underline.png" style=" margin-left:1%; "/>';
     }  
     
     list_right.fill("");
+    Arr_word.fill("");
     wordCount++;
     imgAdd = 0;
     Ans_Right = 0; 
-    Arr_chk = 1;
-    for(let i = 0; i < word_len; i++) Arr_word[i] = "";
+    Ans_chk = 1;
+
+    //console.log(list_right+ "   " + Arr_word + "   " + wordCount + "   " + imgAdd + "    " + Ans_Right + "   " + Ans_chk);
 
     playGame();
 }
@@ -203,6 +202,10 @@ function checkAlpha(clicked_id){
     alpha = alpha.toLowerCase(); // 소문자로 변경
 
     let word_len = list[wordCount].length; // 현재 단어 길이
+    
+    if(wordCount == 1){
+        console.log(list[wordCount]);
+    }
 
     alert(list[wordCount]);
         
@@ -245,7 +248,7 @@ function checkAlpha(clicked_id){
     }     
 
     // 그림이 완성되기 전에 맞추면 다음 단어
-    if(Ans_Right == word_len){
+    if(Ans_Right == word_len && imgAdd < Lev_Img[cur_level-1]){
         /*
         wordCount++;
        // alert("pass  " + wordCount);
@@ -255,6 +258,17 @@ function checkAlpha(clicked_id){
         for(let i = 0; i < word_len; i++) Arr_word[i] = "";
         */
         RemoveNextW();
+    }else{
+        if(Ans_chk == 1){
+            // 그림 추가
+            imgAdd++;
+            alert(Lev_Img[cur_level-1] + "   " + imgAdd);
+            // 그림 체크
+            if(Lev_Img[cur_level-1] == imgAdd){
+                 // 게임 종료
+                 gameOver();
+            }
+        }
     }
 
     // 단어 5개를 모두 맞추면 다음 단계
@@ -264,16 +278,7 @@ function checkAlpha(clicked_id){
         RemoveInfo();
     }
 
-    if(Ans_chk == 1){
-        // 그림 추가
-        imgAdd++;
-        alert(Lev_Img[cur_level-1] + "   " + imgAdd);
-        // 그림 체크
-        if(Lev_Img[cur_level-1] == imgAdd){
-             // 게임 종료
-             gameOver();
-        }
-    }
+    
     Ans_chk = 1;
 }
 
