@@ -17,11 +17,9 @@ body{
     height: 20%;
     top: -3%;
 }
-#Info{
+#wrapper #info{
     position: absolute;
-    color: #1E114D;
-    font-weight: bold;
-    font-size: 380%;
-    top: 13%;
-    left: 40%;
+    margin-left: 26%;
+    margin-top: -13%;
+    height: 100%;
 }
