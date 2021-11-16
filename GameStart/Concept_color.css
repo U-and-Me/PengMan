@@ -1,8 +1,8 @@
 /*가로 스크롤바 없앰*/
 body{
     margin: 0;
-    overflow-y: hidden;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 /*북극 배경*/
 #background{
@@ -16,7 +16,7 @@ body{
     position: absolute;
     width: 11%;
     height: 20%;
-    left: 3%;
+    left: 1%;
     top: -3%;
 }
 /*상단 글씨*/
@@ -25,19 +25,25 @@ body{
     font-weight: 1000;
     font-size: x-large;
     color: #004268;
-    left: 12%;
+    left: 9%;
     top: 5%;
 }
 /*그림판*/
 #draw{
     position: absolute;
     width: 37%;
-    margin-left: 56%;
-    margin-top: -47%;
+    margin-left: 57%;
+    margin-top: -46%;
 }
 .warp{
     position: absolute;
     margin-top: -255px;
+}
+#word_line{
+    position: absolute;
+    width: 40%;
+    top: 50%;
+    left: 12%;
 }
 .keyboard{
     padding-left: 130px;

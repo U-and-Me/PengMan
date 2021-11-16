@@ -101,12 +101,13 @@ let Color_Lev3 = {
 
 let cur_level = 1; // 현재 레벨
 let list = ["", "", "", "", ""]; // 단어 배열
+let list_right = []; // 맞은 단어 배열
 let wordCount = 0; // 단어 세기
 let Arr_word = []; // 제시 단어 넣기
 let Lev_Img = [3, 5, 6]; // 각 레벨 기회
 let imgAdd = 0; // 이미지 추가 수
-let Ans_Right = 0;
-let Ans_chk = 1;
+let Ans_Right = 0; // 단어 길이 체크
+let Ans_chk = 1; // 알파벳 맞았는지 체크
 
 checkLev();
 
@@ -121,6 +122,29 @@ function RemoveInfo(){
     checkLev();
 }
 
+// 다음 단어 넘어가기 전 초기화
+function RemoveNextW(){
+    // 밑줄 넣기
+    //alert("다음단계");
+    var line = document.querySelector("#word_line");
+    while(line.hasChildNodes()){
+        line.removeChild(line.firstChild);
+    }
+
+    for(let i = 0; i < word_len; i++){
+        line.innerHTML += '<img id="underline" src="../img/underline.png" style=" margin-left:1%; "/>';
+    }  
+    
+    list_right.fill("");
+    wordCount++;
+    imgAdd = 0;
+    Ans_Right = 0; 
+    Arr_chk = 1;
+    for(let i = 0; i < word_len; i++) Arr_word[i] = "";
+
+    playGame();
+}
+
 // 레벨에 맞는 단어 5개 가져오기
 function checkLev(){
     switch(cur_level){
@@ -132,16 +156,16 @@ function checkLev(){
 }
 
 function playGame(){
-
     // 첫번째 단어 잘라서 배열에 넣기
     Arr_word = list[wordCount].toLowerCase().split('');
 
     let word_len = list[wordCount].length; // 현재 단어 길이
 
     var line = document.querySelector("#word_line");
+
     // 단어 순서대로 화면에 밑줄 긋기
     for(let i = 0; i < word_len; i++){
-        line.innerHTML += '<img id="underline" src="../img/underline.png" style=" margin-left:1%;"/>';
+        line.innerHTML += '<img id="underline" src="../img/underline.png" style=" margin-left:1%; "/>';
     }
 
 }
@@ -182,43 +206,55 @@ function checkAlpha(clicked_id){
 
     alert(list[wordCount]);
         
-    var line = document.querySelector("#word_line");  
-    // img 태그 삭제
-    /*var line_img = document.querySelector("#underline");
-    line_img.parentNode.removeChild(line_img);    
-*/
+    var line = document.querySelector("#word_line"); 
 
     for(let i = 0; i < word_len; i++){
         if(alpha == Arr_word[i]){ // 맞을 경우 밑줄 제거 후 알파벳 출력
             Ans_Right++;
             alert(alpha + "  " + Arr_word[i]);
+            /*
             for(let j = 0; j < word_len; j++){
                 if(i == j) {
-                    line.innerHTML += '<span style=" margin-left:1%;">'+Arr_word[i]+'</span>';
+                    list_right[i] = Arr_word[i];
+                    //line.innerHTML += '<span style=" margin-left:1%;">'+Arr_word[i]+'</span>';
                 }   
                 else{
-                    line.innerHTML += '<span style=" margin-left:1%;">'+"땡"+'</span>';   
+                    list_right[i] = "";
+                    //line.innerHTML += '<span style=" margin-left:1%;">'+"땡"+'</span>';   
                 }
             }
-            alert(Arr_word[i]);
-            Arr_word[i] = "";
+            */
+            list_right[i] = Arr_word[i];
             Ans_chk = 0;
         }
-        /*else{
-            line.innerHTML += '<div style=" margin-left:1%;"></div>';            
-        }
-        */
     }
+    
+    // 맞은 단어가 있을 경우에만 밑줄 변경
+    if(Ans_chk == 0){
+        while(line.hasChildNodes()){
+            line.removeChild(line.firstChild);
+        }
+
+        for(let i = 0; i < word_len; i++){
+            if(list_right[i]){
+                line.innerHTML += '<span style=" margin-left:1%;">'+list_right[i]+'</span>';
+            }else{
+                line.innerHTML += '<img id="underline" src="../img/underline.png" style=" margin-left:1%; "/>';
+            }
+        }
+    }     
 
     // 그림이 완성되기 전에 맞추면 다음 단어
-    if(Ans_Right == word_len && imgAdd < Lev_Img[cur_level - 1]){
+    if(Ans_Right == word_len){
+        /*
         wordCount++;
        // alert("pass  " + wordCount);
         imgAdd = 0;
         Ans_Right = 0; 
         Arr_chk = 1;
         for(let i = 0; i < word_len; i++) Arr_word[i] = "";
-        playGame();
+        */
+        RemoveNextW();
     }
 
     // 단어 5개를 모두 맞추면 다음 단계
@@ -245,4 +281,5 @@ function gameOver(){
     alert("🐧GameOver🐧");
 
     // index.html로 돌아가기
+    
 }
