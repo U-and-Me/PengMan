@@ -16,7 +16,7 @@ body{
     position: absolute;
     width: 11%;
     height: 20%;
-    left: 3%;
+    left: 1%;
     top: -3%;
 }
 /*상단 글씨*/
@@ -25,12 +25,13 @@ body{
     font-weight: 1000;
     font-size: x-large;
     color: #004268;
-    left: 12%;
+    left: 10%;
     top: 5%;
 }
 /*마당그림판*/
 #yard{
     position: absolute;
+    border-radius: 20px;
     width: 41%;
     margin-left: 52%;
     margin-top: -47%;
@@ -41,7 +42,7 @@ body{
 }
 .keyboard{
     padding-left: 130px;
-    padding-bottom: 30px;
+    padding-bottom: 22px;
     
 }
 /*키보드 버튼*/

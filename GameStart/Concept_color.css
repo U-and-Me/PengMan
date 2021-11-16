@@ -25,15 +25,16 @@ body{
     font-weight: 1000;
     font-size: x-large;
     color: #004268;
-    left: 9%;
+    left: 10%;
     top: 5%;
 }
 /*그림판*/
 #draw{
     position: absolute;
-    width: 37%;
-    margin-left: 57%;
-    margin-top: -46%;
+    border-radius: 20px;
+    width: 36%;
+    margin-left: 55%;
+    margin-top: -47%;
 }
 .warp{
     position: absolute;
@@ -41,13 +42,13 @@ body{
 }
 #word_line{
     position: absolute;
-    width: 40%;
-    top: 50%;
-    left: 12%;
+    width: 43%;
+    top: 47%;
+    left: 14%;
 }
 .keyboard{
     padding-left: 130px;
-    padding-bottom: 30px;
+    padding-bottom: 22px;
     
 }
 /*키보드 버튼*/

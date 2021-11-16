@@ -16,7 +16,7 @@ body{
     position: absolute;
     width: 11%;
     height: 20%;
-    left: 3%;
+    left: 1%;
     top: -3%;
 }
 /*상단 글씨*/
@@ -25,7 +25,7 @@ body{
     font-weight: 1000;
     font-size: x-large;
     color: #004268;
-    left: 12%;
+    left: 10%;
     top: 5%;
 }
 /*테이블그림판*/
@@ -33,7 +33,7 @@ body{
     position: absolute;
     width: 40%;
     margin-left: 52%;
-    margin-top: -53%;
+    margin-top: -55%;
 }
 .warp{
     position: absolute;
@@ -41,8 +41,7 @@ body{
 }
 .keyboard{
     padding-left: 130px;
-    padding-bottom: 30px;
-    
+    padding-bottom: 22px;
 }
 /*키보드 버튼*/
 .keyboard button{

@@ -28,13 +28,13 @@ body{
     left: 10%;
     top: 5%;
 }
-/*코드그림판*/
-#Code{
+/*아이돌그림판*/
+#Idol{
     position: absolute;
     border-radius: 20px;
-    width: 39%;
+    width: 40%;
     margin-left: 52%;
-    margin-top: -47%;
+    margin-top: -55%;
 }
 .warp{
     position: absolute;
@@ -43,7 +43,6 @@ body{
 .keyboard{
     padding-left: 130px;
     padding-bottom: 22px;
-    
 }
 /*키보드 버튼*/
 .keyboard button{
