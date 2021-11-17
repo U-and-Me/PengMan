@@ -108,18 +108,31 @@ let Lev_Img = [3, 5, 6]; // 각 레벨 기회
 let imgAdd = 0; // 이미지 추가 수
 let Ans_Right = 0; // 단어 길이 체크
 let Ans_chk = 1; // 알파벳 맞았는지 체크
+let Img_list = ["draw_brown", "draw_green", "draw_gray","draw_orange", "draw_purple", "draw_red"];
 
 checkLev();
 
 // 단계 넘어가기 전 초기화
 function RemoveInfo(){
+    cur_level++;
     list = ["", "", "", "", ""];
     list_right.fill("");
     Arr_word.fill("");
     wordCount = 0;
     imgAdd = 0;
     Ans_Right = 0;
-    Arr_chk = 1;
+    Ans_chk = 1;
+
+    // 밑줄 제거
+    var line = document.querySelector("#word_line");
+    while(line.hasChildNodes()){
+        line.removeChild(line.firstChild);
+    } 
+
+    // 컨셉, 단계 바꾸기
+    var span = document.getElementById("span");
+    span.innerHTML = "색깔-"+cur_level+"단계";
+
     checkLev();
 }
 
@@ -146,6 +159,12 @@ function RemoveNextW(){
 
 // 레벨에 맞는 단어 5개 가져오기
 function checkLev(){
+
+    // 게임 종료
+    if(cur_level > 3){
+        gameOver();
+    }
+
     switch(cur_level){
         case 1 : bringWords(Color_Lev1); break;
         case 2 : bringWords(Color_Lev2); break;
@@ -202,12 +221,8 @@ function checkAlpha(clicked_id){
     alpha = alpha.toLowerCase(); // 소문자로 변경
 
     let word_len = list[wordCount].length; // 현재 단어 길이
-    
-    if(wordCount == 1){
-        console.log(list[wordCount]);
-    }
 
-    alert(list[wordCount]);
+    //alert(list[wordCount]);
         
     var line = document.querySelector("#word_line"); 
 
@@ -215,18 +230,6 @@ function checkAlpha(clicked_id){
         if(alpha == Arr_word[i]){ // 맞을 경우 밑줄 제거 후 알파벳 출력
             Ans_Right++;
             alert(alpha + "  " + Arr_word[i]);
-            /*
-            for(let j = 0; j < word_len; j++){
-                if(i == j) {
-                    list_right[i] = Arr_word[i];
-                    //line.innerHTML += '<span style=" margin-left:1%;">'+Arr_word[i]+'</span>';
-                }   
-                else{
-                    list_right[i] = "";
-                    //line.innerHTML += '<span style=" margin-left:1%;">'+"땡"+'</span>';   
-                }
-            }
-            */
             list_right[i] = Arr_word[i];
             Ans_chk = 0;
         }
@@ -249,20 +252,19 @@ function checkAlpha(clicked_id){
 
     // 그림이 완성되기 전에 맞추면 다음 단어
     if(Ans_Right == word_len && imgAdd < Lev_Img[cur_level-1]){
-        /*
-        wordCount++;
-       // alert("pass  " + wordCount);
-        imgAdd = 0;
-        Ans_Right = 0; 
-        Arr_chk = 1;
-        for(let i = 0; i < word_len; i++) Arr_word[i] = "";
-        */
-        RemoveNextW();
+        // 단어 5개를 모두 맞추면 다음 단계
+        if(wordCount == 4){
+            alert("다음 단계로 올라갑니다👩🏻‍🎨");
+            RemoveInfo();
+        }else{
+            RemoveNextW();
+        }
     }else{
         if(Ans_chk == 1){
             // 그림 추가
             imgAdd++;
-            alert(Lev_Img[cur_level-1] + "   " + imgAdd);
+            AddImg();
+            //alert(Lev_Img[cur_level-1] + "   " + imgAdd);
             // 그림 체크
             if(Lev_Img[cur_level-1] == imgAdd){
                  // 게임 종료
@@ -271,20 +273,22 @@ function checkAlpha(clicked_id){
         }
     }
 
-    // 단어 5개를 모두 맞추면 다음 단계
-    if(wordCount == 5){
-        cur_level++;
-        prompt("다음 단계로 올라갑니다👩🏻‍🎨");
-        RemoveInfo();
-    }
-
-    
     Ans_chk = 1;
+}
+
+// 이미지 추가
+function AddImg(){
+    
+    
 }
 
 function gameOver(){
     alert("🐧GameOver🐧");
+    alert("🐧메인화면으로 넘어갑니다");
 
     // index.html로 돌아가기
-    
+    var link = '../index.html';
+    location.href = link;
+    location.replace(link);
+    window.open(link);
 }
