@@ -109,6 +109,8 @@ let imgAdd = 0; // 이미지 추가 수
 let Ans_Right = 0; // 단어 길이 체크
 let Ans_chk = 1; // 알파벳 맞았는지 체크
 let Img_list = ["draw_brown", "draw_green", "draw_gray","draw_orange", "draw_purple", "draw_red"];
+let Img_Arr = []; // 이미지 랜덤 인덱스 배열
+let ind = 0; // Img_list 인덱스
 
 checkLev();
 
@@ -170,6 +172,7 @@ function checkLev(){
         case 2 : bringWords(Color_Lev2); break;
         case 3 : bringWords(Color_Lev3); break;
     }
+    bringImages();
     playGame();
 }
 
@@ -215,6 +218,23 @@ function bringWords(wordLists){
     }
 }
 
+function bringImages(){
+    for(let i = 0; i < Lev_Img[cur_level-1]; i++){
+        let arr_len = Img_list.length;
+        let index = Math.floor(Math.random() * arr_len);
+
+        Img_Arr[i] = index;
+
+        for(let j = 0; j < i; j++){ // 중복 제거
+            if(Img_Arr[j] == Img_Arr[i]){
+                i--;
+                break;
+            } 
+        }
+        
+    }
+}
+
 // 입력받아서 맞으면 알파벳 추가 / 틀리면 그림 추가
 function checkAlpha(clicked_id){
     let alpha = document.getElementById(clicked_id).value;
@@ -229,7 +249,7 @@ function checkAlpha(clicked_id){
     for(let i = 0; i < word_len; i++){
         if(alpha == Arr_word[i]){ // 맞을 경우 밑줄 제거 후 알파벳 출력
             Ans_Right++;
-            alert(alpha + "  " + Arr_word[i]);
+           // alert(alpha + "  " + Arr_word[i]);
             list_right[i] = Arr_word[i];
             Ans_chk = 0;
         }
@@ -278,8 +298,16 @@ function checkAlpha(clicked_id){
 
 // 이미지 추가
 function AddImg(){
-    
-    
+    var img = document.createElement('img');
+    img.src = '../img/'+Img_list[Img_Arr[ind++]]+'.png';
+    img.style.position = 'absolute';
+    img.style.width = '350';
+    img.style.height = '350px';
+    img.style.top = '15%';
+    img.style.right = '15%';
+
+    var back = document.querySelector("#back_2");
+    back.appendChild(img);
 }
 
 function gameOver(){
