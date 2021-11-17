@@ -36,6 +36,12 @@ body{
     margin-left: 52%;
     margin-top: -47%;
 }
+#word_line{
+    position: absolute;
+    width: 43%;
+    top: 47%;
+    left: 14%;
+}
 .warp{
     position: absolute;
     margin-top: -255px;
