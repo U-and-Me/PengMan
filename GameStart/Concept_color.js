@@ -124,6 +124,7 @@ function RemoveInfo(){
     imgAdd = 0;
     Ans_Right = 0;
     Ans_chk = 1;
+    ind = 0;
 
     // 밑줄 제거
     var line = document.querySelector("#word_line");
@@ -159,6 +160,7 @@ function RemoveNextW(){
     imgAdd = 0;
     Ans_Right = 0; 
     Ans_chk = 1;
+    ind = 0;
 
     //console.log(list_right+ "   " + Arr_word + "   " + wordCount + "   " + imgAdd + "    " + Ans_Right + "   " + Ans_chk);
 
@@ -287,14 +289,15 @@ function checkAlpha(clicked_id){
         }
     }else{
         if(Ans_chk == 1){
-            // 그림 추가
-            imgAdd++;
-            AddImg();
-            //alert(Lev_Img[cur_level-1] + "   " + imgAdd);
-            // 그림 체크
-            if(Lev_Img[cur_level-1] < imgAdd){
-                 // 게임 종료
-                 gameOver();
+             // 그림 체크
+            if(Lev_Img[cur_level-1] <= imgAdd){
+                // 게임 종료
+                gameOver();
+            }else{
+                // 그림 추가
+                imgAdd++;
+                AddImg();
+                //alert(Lev_Img[cur_level-1] + "   " + imgAdd);
             }
         }
     }

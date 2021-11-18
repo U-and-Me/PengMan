@@ -1,102 +1,102 @@
 "use strict"
 
 let Color_Lev1 = {
-    오소리 : 'badge',
-    낙타 : 'camel',
-    치타 : 'cheetah',
-    닭 : 'chicken',
-    돌고래 : 'dolphin',
-    당나귀 : 'donkey',
-    독수리 : 'eagle',
-    코끼리 : 'elephant',
-    개구리 : 'frog',
-    기린 : 'giraffe',
-    고릴라 : 'gorilla',
-    말 : 'horse',
-    코알라 : 'koala',
-    바닷가재: 'lobster',
-    미어캣 : 'meerkat',
-    원숭이 : 'monkey',
-    문어 : 'octopus',
-    판다 : 'panda',
-    앵무새 : 'parrot',
-    펭귄 : 'penguin',
-    너구리 : 'racoon',
-    새우 : 'shrimp',
-    스컹크 : 'skunk',
-    나무늘보 : 'sloth',
-    달팽이 : 'snail',
-    거미 : 'spider',
-    불가사리 : 'starfish',
-    호랑이 : 'tiger',
-    거북이 : 'turle',
-    얼룩말 : 'zebra'
+    에이핑크 : 'apink',
+    아스트로 : 'astro',
+    비스트 : 'beast',
+    빅뱅 : 'bigbang',
+    블락비 : 'blockb',
+    비투비 : 'btob',
+    씨엔블루 : 'cnblue',
+    데이식스 : 'daysix',
+    피에스타 : 'fiestar',
+    여자친구 : 'gfried',
+    카라 : 'kara',
+    러블리즈 : 'lovelyz',
+    엠블랙 : 'mblaq',
+    미쓰에이 : 'missa',
+    몬스타엑스 : 'monstax',
+    엔플라잉 : 'nflying',
+    뉴이스트 : 'nuest',
+    오마이걸 : 'ohmygirl',
+    레인보우 : 'rainbow',
+    시크릿 : 'secret',
+    샤이니 : 'shinee',
+    씨스타 : 'sistar',
+    타히티 : 'tahiti',
+    티아라 : 'tara',
+    틴탑 : 'teentop',
+    트와이스 : 'twice',
+    유키스 : 'ukiss',
+    빅톤 : 'victon',
+    빅스 : 'vixx',
+    위너 : 'winner'
 };
 
 let Color_Lev2 = {
-    들소 : 'buffalo',
-    잉어 : 'carp',
-    카멜레온 : 'chameleon',
-    침팬지 : 'chimpanzee',
-    매미 : 'cicada',
-    소라 : 'conch',
-    가재 : 'crayfish',
-    악어 : 'crocodile',
-    공룡 : 'dinosaur',
-    거위 : 'goose',
-    고슴도치 : 'hedgehog',
-    하이에나 : 'hyena',
-    캥거루 : 'kangaroo',
-    무당벌레 : 'ladybug',
-    표범 : 'leopard',
-    도마뱀 : 'lizard',
-    두더지 : 'mole',
-    타조 : 'ostrich',
-    비둘기 : 'pigeon',
-    오리너구리 : 'platypus',
-    다람쥐 : 'quirrel',
-    순록 : 'reindeer',
-    연어 : 'salmon',
-    갈매기 : 'seagull',
-    상어 : 'shark',
-    종달새 : 'skylark',
-    오징어 : 'squid',
-    제비 : 'swallow',
-    두꺼비 : 'toad',
-    족제비 : 'weasel'
+    애프터스쿨 : 'afterschool',
+    베리굿 : 'berrygood',
+    블랙핑크 : 'blackpink',
+    브레이브걸스 : 'bravegirls',
+    크레용팝 : 'crayonpop',
+    달샤벳 : 'dalshabet',
+    포미닛 : 'fourminute',
+    걸스데이 : 'girlsday',
+    에스파 : 'aespa',
+    헬로비너스 : 'hellovenus',
+    인피니트 : 'infinite',
+    라붐 : 'laboum',
+    마마무 : 'mamamoo',
+    멜로디데이 : 'melodyday',
+    모모랜드 : 'momoland',
+    엔시티드림 : 'nctdream',
+    나인뮤지스 : 'ninemuses',
+    펜타곤 : 'pentagon',
+    프리스틴 : 'pristin',
+    레드벨벳 : 'redvelvet',
+    세븐틴 : 'seventeen',
+    스누퍼 : 'snuper',
+    소나무 : 'sonamoo',
+    써니힐 : 'sunnyhill',
+    슈퍼주니어 : 'superjunior',
+    더보이즈 : 'theboyz',
+    스테이씨 : 'stayc',
+    언니쓰 : 'unnies',
+    업텐션 : 'uptention',
+    원더걸스 : 'wodergirls'
 };
 
 let Color_Lev3 = {
-    개미핥기 : 'anteater',
-    영양 : 'antelope',
-    북극여우 : 'arcticfox',
-    줄무늬다람쥐 : 'chipmunk',
-    산호 : 'coral',
-    뻐꾸기 : 'cuckoo',
-    사막여우 : 'desertfox',
-    물개 : 'furseal',
-    가젤 : 'gazelle',
-    갈치 : 'hairtail',
-    하마 : 'hippopotamus',
-    재규어 : 'jaguar',
-    랫서판다 : 'lesserpanda',
-    고등어 : 'mackerel',
-    까치 : 'magpie',
-    몽구스 : 'mongoose',
-    꾀꼬리 : 'nightingale',
-    오랑우탄 : 'orangutan',
-    공작새 : 'peacock',
-    북극곰 : 'polarbear',
-    쿼카 : 'quokka',
-    코뿔소 : 'rhinoceros',
-    노루 : 'roedeer',
-    바다코끼리 : 'seaelephant',
-    참새 : 'sparrow',
-    가오리 : 'stingray',
-    올챙이 : 'tadpole',
-    고라니 : 'wapiti',
-    기러기 : 'wildgoose',
-    삵 : 'wildcat'
+    소년공화국 : 'boysrepulic',
+    브라운아이드걸스 : 'browneyedgirls',
+    셀럽파이브 : 'celebfive',
+    체리블렛 : 'cherrybullet',
+    싹쓰리 : 'ssakthree',
+    크레비티 : 'cravity',
+    동키즈 : 'dongkiz',
+    드림캐쳐 : 'dreamcatcher',
+    엔하이픈 : 'enhypen',
+    에버글로우 : 'everyglow',
+    프로미스나인 : 'fromisnine',
+    소녀시대 : 'girlsgeneration',
+    골든차일드 : 'goldenchild',
+    구구단 : 'gugudan',
+    하이라이트 : 'highlight',
+    임팩트 : 'imfact',
+    코요태 : 'koyote',
+    매드타운 : 'madtown',
+    워너원 : 'wannaone',
+    원더나인 : 'onethenine',
+    원어스 : 'oneus',
+    오렌지카라멜 : 'orangecaramel',
+    로켓펀치 : 'rocketpunch',
+    신화 : 'shinhwa',
+    스텔라 : 'stellar',
+    스트레이키즈 : 'straykids',
+    투바투 : 'tomorrowxtogether',
+    트레저 : 'treasure',
+    위클리 : 'weeekly',
+    위키미키 : 'wekimeki'
 };
 
 let cur_level = 1; // 현재 레벨
@@ -108,7 +108,7 @@ let Lev_Img = [3, 5, 6]; // 각 레벨 기회
 let imgAdd = 0; // 이미지 추가 수
 let Ans_Right = 0; // 단어 길이 체크
 let Ans_chk = 1; // 알파벳 맞았는지 체크
-let Img_list = ['bear', 'cat', 'panda','lion', 'rabbit', 'squirrel'];
+let Img_list = ["draw_brown", "draw_green", "draw_gray","draw_orange", "draw_purple", "draw_red"];
 let Img_Arr = []; // 이미지 랜덤 인덱스 배열
 let ind = 0; // Img_list 인덱스
 
@@ -140,7 +140,7 @@ function RemoveInfo(){
 
     // 컨셉, 단계 바꾸기
     var span = document.getElementById("span");
-    span.innerHTML = "동물-"+cur_level+"단계";
+    span.innerHTML = "아이돌-"+cur_level+"단계";
 
     checkLev();
 }
@@ -168,6 +168,8 @@ function RemoveNextW(){
     Ans_chk = 1;
     ind = 0;
 
+    //console.log(list_right+ "   " + Arr_word + "   " + wordCount + "   " + imgAdd + "    " + Ans_Right + "   " + Ans_chk);
+
     playGame();
 }
 
@@ -184,12 +186,11 @@ function checkLev(){
         case 2 : bringWords(Color_Lev2); break;
         case 3 : bringWords(Color_Lev3); break;
     }
+    bringImages();
     playGame();
 }
 
 function playGame(){
-    
-    bringImages();
     // 첫번째 단어 잘라서 배열에 넣기
     Arr_word = list[wordCount].toLowerCase().split('');
 
@@ -244,6 +245,7 @@ function bringImages(){
                 break;
             } 
         }
+        
     }
 }
 
@@ -254,7 +256,7 @@ function checkAlpha(clicked_id){
 
     let word_len = list[wordCount].length; // 현재 단어 길이
 
-    console.log(list[wordCount]);
+    //alert(list[wordCount]);
         
     var line = document.querySelector("#word_line"); 
 
@@ -312,7 +314,7 @@ function checkAlpha(clicked_id){
 // 이미지 추가
 function AddImg(){
     var img = document.createElement('img');
-    img.src = '../img/animal_'+Img_list[Img_Arr[ind]]+'.png';
+    img.src = '../img/'+Img_list[Img_Arr[ind++]]+'.png';
     img.id = 'animal_img';
     img.style.position = 'absolute';
     img.style.width = '400px';
@@ -322,10 +324,6 @@ function AddImg(){
 
     var back = document.querySelector("#back_img");
     back.appendChild(img);
-
-    console.log('../img/animal_'+Img_list[Img_Arr[ind]]+'.png' + "        " + Img_list[Img_Arr[ind]] + "       " +Img_Arr[ind] + "  " +ind);
-
-    ind++;
 }
 
 function gameOver(){
@@ -333,9 +331,8 @@ function gameOver(){
     alert("🐧메인화면으로 넘어갑니다");
 
     // index.html로 돌아가기
-    /*
     var link = '../index.html';
     location.href = link;
     location.replace(link);
-    window.open(link);*/
+    window.open(link);
 }

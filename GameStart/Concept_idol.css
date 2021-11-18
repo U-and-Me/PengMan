@@ -40,6 +40,12 @@ body{
     position: absolute;
     margin-top: -255px;
 }
+#word_line{
+    position: absolute;
+    width: 43%;
+    top: 47%;
+    left: 14%;
+}
 .keyboard{
     padding-left: 130px;
     padding-bottom: 22px;
