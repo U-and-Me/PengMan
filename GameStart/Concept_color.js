@@ -277,7 +277,7 @@ function checkAlpha(clicked_id){
     }     
 
     // 그림이 완성되기 전에 맞추면 다음 단어
-    if(Ans_Right == word_len && imgAdd < Lev_Img[cur_level-1]){
+    if(Ans_Right == word_len && imgAdd <= Lev_Img[cur_level-1]){
         // 단어 5개를 모두 맞추면 다음 단계
         if(wordCount == 4){
             alert("다음 단계로 올라갑니다👩🏻‍🎨");
@@ -292,7 +292,7 @@ function checkAlpha(clicked_id){
             AddImg();
             //alert(Lev_Img[cur_level-1] + "   " + imgAdd);
             // 그림 체크
-            if(Lev_Img[cur_level-1] == imgAdd){
+            if(Lev_Img[cur_level-1] < imgAdd){
                  // 게임 종료
                  gameOver();
             }

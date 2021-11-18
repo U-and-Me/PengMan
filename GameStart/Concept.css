@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+/*북극 배경*/
+#wrapper #background{
+    width: 100vw;
+    height: 100vh;
+}
+#wrapper{
+    position: absolute;
+}
+#title{
+    position: absolute;
+    font-size: 50px;
+    font-weight: 1000;
+    color: #110735;
+    left: 27%;
+    top: 13%;
+}
+#char{
+    position: absolute;
+    width: 15%;
+    left: 61%;
+    top: 1%;
+}
