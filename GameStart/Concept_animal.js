@@ -246,7 +246,7 @@ function checkAlpha(clicked_id){
 
     let word_len = list[wordCount].length; // 현재 단어 길이
 
-    alert(list[wordCount]);
+    //alert(list[wordCount]);
         
     var line = document.querySelector("#word_line"); 
 

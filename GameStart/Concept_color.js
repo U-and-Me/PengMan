@@ -146,6 +146,12 @@ function RemoveNextW(){
     while(line.hasChildNodes()){
         line.removeChild(line.firstChild);
     }  
+
+    // 사진 제거
+    var back = document.querySelector("#back_img");
+    while(back.hasChildNodes()){
+        back.removeChild(back.firstChild);
+    }
     
     list_right.fill("");
     Arr_word.fill("");
@@ -300,13 +306,14 @@ function checkAlpha(clicked_id){
 function AddImg(){
     var img = document.createElement('img');
     img.src = '../img/'+Img_list[Img_Arr[ind++]]+'.png';
+    img.id = 'animal_img';
     img.style.position = 'absolute';
-    img.style.width = '350';
-    img.style.height = '350px';
+    img.style.width = '400px';
+    img.style.height = '400px';
     img.style.top = '15%';
     img.style.right = '15%';
 
-    var back = document.querySelector("#back_2");
+    var back = document.querySelector("#back_img");
     back.appendChild(img);
 }
 
