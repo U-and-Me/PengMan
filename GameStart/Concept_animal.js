@@ -148,7 +148,6 @@ function RemoveInfo(){
 // 다음 단어 넘어가기 전 초기화
 function RemoveNextW(){
     // 밑줄 삭제
-    //alert("다음단계");
     var line = document.querySelector("#word_line");
     while(line.hasChildNodes()){
         line.removeChild(line.firstChild);
@@ -333,9 +332,9 @@ function gameOver(){
     alert("🐧메인화면으로 넘어갑니다");
 
     // index.html로 돌아가기
-    /*
+    
     var link = '../index.html';
     location.href = link;
     location.replace(link);
-    window.open(link);*/
+    window.open(link);
 }

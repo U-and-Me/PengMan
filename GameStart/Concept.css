@@ -11,6 +11,12 @@ body{
 #wrapper{
     position: absolute;
 }
+#char_link{
+    position: absolute;
+    width: 11%;
+    height: 20%;
+    top: -3%;
+}
 #title{
     position: absolute;
     font-size: 50px;
@@ -24,4 +30,16 @@ body{
     width: 15%;
     left: 61%;
     top: 1%;
+}
+#select_con{
+    position: absolute;
+    width: 70%;
+    height: 50%;
+    left: 20%;
+    top: 25%;
+}
+#image{
+    width: 20%;
+    height:30%;
+    margin-right: 3%;
 }
