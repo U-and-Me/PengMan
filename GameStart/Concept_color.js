@@ -316,8 +316,8 @@ function AddImg(){
     img.src = '../img/'+Img_list[Img_Arr[ind++]]+'.png';
     img.id = 'animal_img';
     img.style.position = 'absolute';
-    img.style.width = '400px';
-    img.style.height = '400px';
+    img.style.width = '200px';
+    img.style.height = '200px';
     img.style.top = pos_t[pos_ind]+'%';
     img.style.right = pos_r[pos_ind]+'%';
 
