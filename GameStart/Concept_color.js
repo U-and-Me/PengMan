@@ -111,6 +111,9 @@ let Ans_chk = 1; // 알파벳 맞았는지 체크
 let Img_list = ["draw_brown", "draw_green", "draw_gray","draw_orange", "draw_purple", "draw_red"];
 let Img_Arr = []; // 이미지 랜덤 인덱스 배열
 let ind = 0; // Img_list 인덱스
+let pos_t = [15, 2, 10, 18, 27]; // 사진 위치
+let pos_r = [15, 7, 22, 30, 1]; // 사진 위치
+let pos_ind = 0; // 위치 배열 인덱스
 
 checkLev();
 
@@ -125,6 +128,7 @@ function RemoveInfo(){
     Ans_Right = 0;
     Ans_chk = 1;
     ind = 0;
+    pos_ind = 0;
 
     // 밑줄 제거
     var line = document.querySelector("#word_line");
@@ -161,6 +165,7 @@ function RemoveNextW(){
     Ans_Right = 0; 
     Ans_chk = 1;
     ind = 0;
+    pos_ind = 0;
 
     //console.log(list_right+ "   " + Arr_word + "   " + wordCount + "   " + imgAdd + "    " + Ans_Right + "   " + Ans_chk);
 
@@ -271,7 +276,7 @@ function checkAlpha(clicked_id){
 
         for(let i = 0; i < word_len; i++){
             if(list_right[i]){
-                line.innerHTML += '<span style=" margin-left:1%;">'+list_right[i]+'</span>';
+                line.innerHTML += '<span style=" margin-left:1%; width:68px; font-size:30px;">'+list_right[i]+'</span>';
             }else{
                 line.innerHTML += '<img id="underline" src="../img/underline.png" style=" margin-left:1%; "/>';
             }
@@ -313,11 +318,13 @@ function AddImg(){
     img.style.position = 'absolute';
     img.style.width = '400px';
     img.style.height = '400px';
-    img.style.top = '15%';
-    img.style.right = '15%';
+    img.style.top = pos_t[pos_ind]+'%';
+    img.style.right = pos_r[pos_ind]+'%';
 
     var back = document.querySelector("#back_img");
     back.appendChild(img);
+
+    pos_ind++;
 }
 
 function gameOver(){
