@@ -99,7 +99,7 @@ let Color_Lev3 = {
     옐로우쉬그린색 : 'yellowishgreen'
 };
 
-let cur_level = 1; // 현재 레벨
+let cur_level = 3; // 현재 레벨
 let list = ["", "", "", "", ""]; // 단어 배열
 let list_right = []; // 맞은 단어 배열
 let wordCount = 0; // 단어 세기
@@ -111,8 +111,8 @@ let Ans_chk = 1; // 알파벳 맞았는지 체크
 let Img_list = ["draw_brown", "draw_green", "draw_gray","draw_orange", "draw_purple", "draw_red"];
 let Img_Arr = []; // 이미지 랜덤 인덱스 배열
 let ind = 0; // Img_list 인덱스
-let pos_t = [15, 2, 10, 18, 27]; // 사진 위치
-let pos_r = [15, 7, 22, 30, 1]; // 사진 위치
+let pos_t = [15, 2, 10, 18, 27, 23]; // 사진 위치
+let pos_r = [13, 7, 22, 26, 1, 17]; // 사진 위치
 let pos_ind = 0; // 위치 배열 인덱스
 
 checkLev();
@@ -135,6 +135,12 @@ function RemoveInfo(){
     while(line.hasChildNodes()){
         line.removeChild(line.firstChild);
     } 
+
+    // 사진 제거
+    var back = document.querySelector("#back_img");
+    while(back.hasChildNodes()){
+        back.removeChild(back.firstChild);
+    }
 
     // 컨셉, 단계 바꾸기
     var span = document.getElementById("span");
