@@ -316,13 +316,10 @@ function AddImg(){
     img.src = '../img/'+Img_list[Img_Arr[ind++]]+'.png';
     img.id = 'color_img';
     img.style.position = 'absolute';
-<<<<<<< HEAD
     img.style.width = '400px';
     img.style.height = '400px';
-=======
     img.style.width = '300px';
     img.style.height = '300px';
->>>>>>> 231620424dd32cf7e391f562a4405c692e5cd0f1
     img.style.top = pos_t[pos_ind]+'%';
     img.style.right = pos_r[pos_ind]+'%';
 

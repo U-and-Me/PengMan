@@ -31,9 +31,10 @@ body{
 /*hobby그림판*/
 #hobby{
     position: absolute;
-    width: 40%;
-    margin-left: 53%;
-    margin-top: -47%;
+    border-radius: 20px;
+    width: 41%;
+    margin-left: 52%;
+    margin-top: -45%;
 }
 .warp{
     position: absolute;
