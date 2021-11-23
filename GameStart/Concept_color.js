@@ -21,7 +21,7 @@ let Color_Lev1 = {
     남색 : 'navy',
     황토색 : 'ocher',
     올리브색 : 'olive',
-    주황색 : 'orange',
+    주황색 : ' orange',
     핑크색 : 'pink',
     보라색 : 'purple',
     스칼렛색 : 'scarlet',
@@ -111,8 +111,8 @@ let Ans_chk = 1; // 알파벳 맞았는지 체크
 let Img_list = ["draw_brown", "draw_green", "draw_gray","draw_orange", "draw_purple", "draw_red"];
 let Img_Arr = []; // 이미지 랜덤 인덱스 배열
 let ind = 0; // Img_list 인덱스
-let pos_t = [15, 2, 10, 18, 27, 23]; // 사진 위치
-let pos_r = [13, 7, 22, 26, 1, 17]; // 사진 위치
+let pos_t = [15, 2, 10, 18, 27]; // 사진 위치
+let pos_r = [15, 7, 22, 30, 1]; // 사진 위치
 let pos_ind = 0; // 위치 배열 인덱스
 
 checkLev();
@@ -135,12 +135,6 @@ function RemoveInfo(){
     while(line.hasChildNodes()){
         line.removeChild(line.firstChild);
     } 
-
-    // 사진 제거
-    var back = document.querySelector("#back_img");
-    while(back.hasChildNodes()){
-        back.removeChild(back.firstChild);
-    }
 
     // 컨셉, 단계 바꾸기
     var span = document.getElementById("span");
@@ -322,8 +316,13 @@ function AddImg(){
     img.src = '../img/'+Img_list[Img_Arr[ind++]]+'.png';
     img.id = 'color_img';
     img.style.position = 'absolute';
+<<<<<<< HEAD
     img.style.width = '400px';
     img.style.height = '400px';
+=======
+    img.style.width = '300px';
+    img.style.height = '300px';
+>>>>>>> 231620424dd32cf7e391f562a4405c692e5cd0f1
     img.style.top = pos_t[pos_ind]+'%';
     img.style.right = pos_r[pos_ind]+'%';
 
