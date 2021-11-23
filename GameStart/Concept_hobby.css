@@ -28,19 +28,12 @@ body{
     left: 10%;
     top: 5%;
 }
-/*뷰티그림판*/
-#beauty{
+/*hobby그림판*/
+#hobby{
     position: absolute;
-    border-radius: 20px;
     width: 40%;
-    margin-left: 52%;
+    margin-left: 53%;
     margin-top: -47%;
-}
-#word_line{
-    position: absolute;
-    width: 43%;
-    top: 45%;
-    left: 14%;
 }
 .warp{
     position: absolute;
@@ -49,7 +42,6 @@ body{
 .keyboard{
     padding-left: 130px;
     padding-bottom: 22px;
-    
 }
 /*키보드 버튼*/
 .keyboard button{

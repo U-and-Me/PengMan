@@ -28,13 +28,17 @@ body{
     left: 10%;
     top: 5%;
 }
-/*뷰티그림판*/
-#beauty{
+/*직업그림판*/
+#job{
     position: absolute;
     border-radius: 20px;
     width: 40%;
     margin-left: 52%;
     margin-top: -47%;
+}
+.warp{
+    position: absolute;
+    margin-top: -255px;
 }
 #word_line{
     position: absolute;
@@ -42,14 +46,9 @@ body{
     top: 45%;
     left: 14%;
 }
-.warp{
-    position: absolute;
-    margin-top: -255px;
-}
 .keyboard{
     padding-left: 130px;
     padding-bottom: 22px;
-    
 }
 /*키보드 버튼*/
 .keyboard button{
