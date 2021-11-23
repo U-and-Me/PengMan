@@ -99,7 +99,7 @@ let Color_Lev3 = {
     삵 : 'wildcat'
 };
 
-let cur_level = 3; // 현재 레벨
+let cur_level = 1; // 현재 레벨
 let list = ["", "", "", "", ""]; // 단어 배열
 let list_right = []; // 맞은 단어 배열
 let wordCount = 0; // 단어 세기
@@ -258,7 +258,7 @@ function checkAlpha(clicked_id){
 
     let word_len = list[wordCount].length; // 현재 단어 길이
 
-    console.log(list[wordCount]);
+    //console.log(list[wordCount]);
         
     var line = document.querySelector("#word_line"); 
 

@@ -99,7 +99,7 @@ let Color_Lev3 = {
     위키미키 : 'wekimeki'
 };
 
-let cur_level = 3; // 현재 레벨
+let cur_level = 1; // 현재 레벨
 let list = ["", "", "", "", ""]; // 단어 배열
 let list_right = []; // 맞은 단어 배열
 let wordCount = 0; // 단어 세기
@@ -320,7 +320,7 @@ function checkAlpha(clicked_id){
 function AddImg(){
     var img = document.createElement('img');
     img.src = '../img/'+Img_list[Img_Arr[ind++]]+'.png';
-    img.id = 'animal_img';
+    img.id = 'idol_img';
     img.style.position = 'absolute';
     img.style.width = '400px';
     img.style.height = '400px';

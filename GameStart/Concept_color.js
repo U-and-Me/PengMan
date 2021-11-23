@@ -99,7 +99,7 @@ let Color_Lev3 = {
     옐로우쉬그린색 : 'yellowishgreen'
 };
 
-let cur_level = 3; // 현재 레벨
+let cur_level = 1; // 현재 레벨
 let list = ["", "", "", "", ""]; // 단어 배열
 let list_right = []; // 맞은 단어 배열
 let wordCount = 0; // 단어 세기
@@ -320,10 +320,10 @@ function checkAlpha(clicked_id){
 function AddImg(){
     var img = document.createElement('img');
     img.src = '../img/'+Img_list[Img_Arr[ind++]]+'.png';
-    img.id = 'animal_img';
+    img.id = 'color_img';
     img.style.position = 'absolute';
-    img.style.width = '200px';
-    img.style.height = '200px';
+    img.style.width = '400px';
+    img.style.height = '400px';
     img.style.top = pos_t[pos_ind]+'%';
     img.style.right = pos_r[pos_ind]+'%';
 
