@@ -1,6 +1,6 @@
 "use strict"
 
-let Color_Lev1 = {
+let Idol_Lev1 = {
     에이핑크 : 'apink',
     아스트로 : 'astro',
     비스트 : 'beast',
@@ -33,7 +33,7 @@ let Color_Lev1 = {
     위너 : 'winner'
 };
 
-let Color_Lev2 = {
+let Idol_Lev2 = {
     애프터스쿨 : 'afterschool',
     베리굿 : 'berrygood',
     블랙핑크 : 'blackpink',
@@ -66,7 +66,7 @@ let Color_Lev2 = {
     원더걸스 : 'wodergirls'
 };
 
-let Color_Lev3 = {
+let Idol_Lev3 = {
     소년공화국 : 'boysrepulic',
     브라운아이드걸스 : 'browneyedgirls',
     셀럽파이브 : 'celebfive',
@@ -187,9 +187,9 @@ function checkLev(){
     }
 
     switch(cur_level){
-        case 1 : bringWords(Color_Lev1); break;
-        case 2 : bringWords(Color_Lev2); break;
-        case 3 : bringWords(Color_Lev3); break;
+        case 1 : bringWords(Idol_Lev1); break;
+        case 2 : bringWords(Idol_Lev2); break;
+        case 3 : bringWords(Idol_Lev3); break;
     }
     bringImages();
     playGame();

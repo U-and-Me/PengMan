@@ -1,6 +1,6 @@
 "use strict"
 
-let Color_Lev1 = {
+let Hobby_Lev1 = {
     체커 : 'checker',
     체스 : 'chess',
     합창 : 'choir',
@@ -33,7 +33,7 @@ let Color_Lev1 = {
     서핑 : 'surfing'
 };
 
-let Color_Lev2 = {
+let Hobby_Lev2 = {
     보드게임 : 'boardgame',
     서예 : 'calligraphy',
     청소 : 'cleaning',
@@ -66,7 +66,7 @@ let Color_Lev2 = {
     봉사활동 : 'valunteering'
 };
 
-let Color_Lev3 = {
+let Hobby_Lev3 = {
     사인 : 'autograph',
     모형만들기 : 'build models',
     동전수집 : 'coin collecting',
@@ -184,9 +184,9 @@ function checkLev(){
     }
 
     switch(cur_level){
-        case 1 : bringWords(Color_Lev1); break;
-        case 2 : bringWords(Color_Lev2); break;
-        case 3 : bringWords(Color_Lev3); break;
+        case 1 : bringWords(Hobby_Lev1); break;
+        case 2 : bringWords(Hobby_Lev2); break;
+        case 3 : bringWords(Hobby_Lev3); break;
     }
     playGame();
 }

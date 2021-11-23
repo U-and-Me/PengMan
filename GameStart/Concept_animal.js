@@ -1,6 +1,6 @@
 "use strict"
 
-let Color_Lev1 = {
+let Animal_Lev1 = {
     오소리 : 'badge',
     낙타 : 'camel',
     치타 : 'cheetah',
@@ -33,7 +33,7 @@ let Color_Lev1 = {
     얼룩말 : 'zebra'
 };
 
-let Color_Lev2 = {
+let Animal_Lev2 = {
     들소 : 'buffalo',
     잉어 : 'carp',
     카멜레온 : 'chameleon',
@@ -66,7 +66,7 @@ let Color_Lev2 = {
     족제비 : 'weasel'
 };
 
-let Color_Lev3 = {
+let Animal_Lev3 = {
     개미핥기 : 'anteater',
     영양 : 'antelope',
     북극여우 : 'arcticfox',
@@ -184,9 +184,9 @@ function checkLev(){
     }
 
     switch(cur_level){
-        case 1 : bringWords(Color_Lev1); break;
-        case 2 : bringWords(Color_Lev2); break;
-        case 3 : bringWords(Color_Lev3); break;
+        case 1 : bringWords(Animal_Lev1); break;
+        case 2 : bringWords(Animal_Lev2); break;
+        case 3 : bringWords(Animal_Lev3); break;
     }
     playGame();
 }

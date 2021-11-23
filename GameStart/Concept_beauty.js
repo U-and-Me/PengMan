@@ -1,6 +1,6 @@
 "use strict"
 
-let Color_Lev1 = {
+let Beauty_Lev1 = {
     여드름 : 'badge',
     향기 : 'aroma',
     기초 : 'base',
@@ -33,7 +33,7 @@ let Color_Lev1 = {
     왁스 : 'wax'
 };
 
-let Color_Lev2 = {
+let Beauty_Lev2 = {
     발찌 : 'anorak',
     베레모 : 'beret',
     블레이저 : 'blazer',
@@ -66,7 +66,7 @@ let Color_Lev2 = {
     유니폼 : 'uniform'
 };
 
-let Color_Lev3 = {
+let Beauty_Lev3 = {
     악세사리 : 'accessory',
     알레르기 : 'allergic',
     밸런싱 : 'balancing',
@@ -184,9 +184,9 @@ function checkLev(){
     }
 
     switch(cur_level){
-        case 1 : bringWords(Color_Lev1); break;
-        case 2 : bringWords(Color_Lev2); break;
-        case 3 : bringWords(Color_Lev3); break;
+        case 1 : bringWords(Beauty_Lev1); break;
+        case 2 : bringWords(Beauty_Lev2); break;
+        case 3 : bringWords(Beauty_Lev3); break;
     }
     playGame();
 }
