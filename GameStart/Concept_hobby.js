@@ -99,7 +99,7 @@ let Hobby_Lev3 = {
     유튜브 : 'youtuber'
 };
 
-let cur_level = 3; // 현재 레벨
+let cur_level = 1; // 현재 레벨
 let list = ["", "", "", "", ""]; // 단어 배열
 let list_right = []; // 맞은 단어 배열
 let wordCount = 0; // 단어 세기
