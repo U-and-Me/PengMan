@@ -108,10 +108,10 @@ let Lev_Img = [3, 5, 6]; // 각 레벨 기회
 let imgAdd = 0; // 이미지 추가 수
 let Ans_Right = 0; // 단어 길이 체크
 let Ans_chk = 1; // 알파벳 맞았는지 체크
-let Img_list = ['bear', 'cat', 'panda','lion', 'rabbit', 'squirrel'];
+let Img_list = ['art', 'bike', 'cook','game', 'sing', 'skateboard'];
 let Img_Arr = []; // 이미지 랜덤 인덱스 배열
 let ind = 0; // Img_list 인덱스
-let pos_t = [15, 2, 10, 18, 27, 23]; // 사진 위치
+let pos_t = [15, 2, 10, 1, 8, 4]; // 사진 위치
 let pos_r = [13, 7, 22, 26, 1, 17]; // 사진 위치
 let pos_ind = 0; // 위치 배열 인덱스
 
@@ -320,7 +320,7 @@ function checkAlpha(clicked_id){
 // 이미지 추가
 function AddImg(){
     var img = document.createElement('img');
-    img.src = '../img/animal_'+Img_list[Img_Arr[ind]]+'.png';
+    img.src = '../img/hobby_'+Img_list[Img_Arr[ind]]+'.png';
     img.id = 'hobby_img';
     img.style.position = 'absolute';
     img.style.width = '400px';
