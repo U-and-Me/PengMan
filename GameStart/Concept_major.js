@@ -108,11 +108,11 @@ let Lev_Img = [3, 5, 6]; // 각 레벨 기회
 let imgAdd = 0; // 이미지 추가 수
 let Ans_Right = 0; // 단어 길이 체크
 let Ans_chk = 1; // 알파벳 맞았는지 체크
-let Img_list = ['bear', 'cat', 'panda','lion', 'rabbit', 'squirrel'];
+let Img_list = ['error1', 'error2', 'error3','error4', 'error5', 'error6'];
 let Img_Arr = []; // 이미지 랜덤 인덱스 배열
 let ind = 0; // Img_list 인덱스
-let pos_t = [15, 2, 10, 18, 27, 23]; // 사진 위치
-let pos_r = [13, 7, 22, 26, 1, 17]; // 사진 위치
+let pos_t = [15, 2, 10, -4, -10, -18]; // 사진 위치
+let pos_r = [3, 7, 19, 20, 3, 13]; // 사진 위치
 let pos_ind = 0; // 위치 배열 인덱스
 
 checkLev();
@@ -144,7 +144,7 @@ function RemoveInfo(){
 
     // 컨셉, 단계 바꾸기
     var span = document.getElementById("span");
-    span.innerHTML = "직업-"+cur_level+"단계";
+    span.innerHTML = "코딩-"+cur_level+"단계";
 
     checkLev();
 }
@@ -320,11 +320,11 @@ function checkAlpha(clicked_id){
 // 이미지 추가
 function AddImg(){
     var img = document.createElement('img');
-    img.src = '../img/animal_'+Img_list[Img_Arr[ind]]+'.png';
+    img.src = '../img/major_'+Img_list[Img_Arr[ind]]+'.png';
     img.id = 'Major_img';
     img.style.position = 'absolute';
-    img.style.width = '400px';
-    img.style.height = '400px';
+    img.style.width = '500px';
+    img.style.height = '500px';
     img.style.top = pos_t[pos_ind]+'%';
     img.style.right = pos_r[pos_ind]+'%';
 
