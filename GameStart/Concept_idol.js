@@ -108,11 +108,11 @@ let Lev_Img = [3, 5, 6]; // 각 레벨 기회
 let imgAdd = 0; // 이미지 추가 수
 let Ans_Right = 0; // 단어 길이 체크
 let Ans_chk = 1; // 알파벳 맞았는지 체크
-let Img_list = ["draw_brown", "draw_green", "draw_gray","draw_orange", "draw_purple", "draw_red"];
+let Img_list = ["apink", "2pm", "girl","hasungwoon", "mamamoo", "exo"];
 let Img_Arr = []; // 이미지 랜덤 인덱스 배열
 let ind = 0; // Img_list 인덱스
-let pos_t = [15, 2, 10, 18, 27, 23]; // 사진 위치
-let pos_r = [13, 7, 22, 26, 1, 17]; // 사진 위치
+let pos_t = [10, -6, 10, -10, 4, -17]; // 사진 위치
+let pos_r = [13, 7, 22, 17, 1, -2]; // 사진 위치
 let pos_ind = 0; // 위치 배열 인덱스
 
 checkLev();
@@ -319,11 +319,11 @@ function checkAlpha(clicked_id){
 // 이미지 추가
 function AddImg(){
     var img = document.createElement('img');
-    img.src = '../img/'+Img_list[Img_Arr[ind++]]+'.png';
+    img.src = '../img/idol_'+Img_list[Img_Arr[ind++]]+'.png';
     img.id = 'idol_img';
     img.style.position = 'absolute';
-    img.style.width = '400px';
-    img.style.height = '400px';
+    img.style.width = '500px';
+    img.style.height = '500px';
     img.style.top = pos_t[pos_ind]+'%';
     img.style.right = pos_r[pos_ind]+'%';
 

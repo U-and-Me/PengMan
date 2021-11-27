@@ -108,11 +108,11 @@ let Lev_Img = [3, 5, 6]; // 각 레벨 기회
 let imgAdd = 0; // 이미지 추가 수
 let Ans_Right = 0; // 단어 길이 체크
 let Ans_chk = 1; // 알파벳 맞았는지 체크
-let Img_list = ["draw_brown", "draw_green", "draw_gray","draw_orange", "draw_purple", "draw_red"];
+let Img_list = ["brown", "green", "gray","orange", "purple", "red"];
 let Img_Arr = []; // 이미지 랜덤 인덱스 배열
 let ind = 0; // Img_list 인덱스
-let pos_t = [15, 2, 10, 18, 27]; // 사진 위치
-let pos_r = [15, 7, 22, 30, 1]; // 사진 위치
+let pos_t = [15, 2, 4, 18, 27, 21]; // 사진 위치
+let pos_r = [15, 7, 22, 27, 4, 19]; // 사진 위치
 let pos_ind = 0; // 위치 배열 인덱스
 
 checkLev();
@@ -313,7 +313,7 @@ function checkAlpha(clicked_id){
 // 이미지 추가
 function AddImg(){
     var img = document.createElement('img');
-    img.src = '../img/'+Img_list[Img_Arr[ind++]]+'.png';
+    img.src = '../img/draw_'+Img_list[Img_Arr[ind++]]+'.png';
     img.id = 'color_img';
     img.style.position = 'absolute';
     img.style.width = '400px';
