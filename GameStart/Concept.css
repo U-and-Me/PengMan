@@ -17,29 +17,31 @@ body{
     height: 20%;
     top: -3%;
 }
-#title{
+#text{
     position: absolute;
-    font-size: 50px;
-    font-weight: 1000;
-    color: #110735;
-    left: 27%;
-    top: 13%;
+    width: 50%;
+    left: 25%;
+    top: -35%;
 }
 #char{
     position: absolute;
     width: 15%;
-    left: 61%;
+    left: 67%;
     top: 1%;
 }
 #select_con{
     position: absolute;
+    border-radius: 20px;
     width: 70%;
     height: 50%;
     left: 20%;
-    top: 25%;
+    top: 30%;
 }
-#image{
+
+#image {
     width: 20%;
     height:30%;
+    border-radius: 20px;
+    margin-bottom: 5%;  
     margin-right: 3%;
 }

@@ -31,9 +31,10 @@ body{
 /*테이블그림판*/
 #table{
     position: absolute;
-    width: 40%;
-    margin-left: 55%;
-    margin-top: -52%;
+    border-radius: 20px;
+    width: 41%;
+    margin-left: 52%;
+    margin-top: -45%;
 }
 #word_line{
     position: absolute;
