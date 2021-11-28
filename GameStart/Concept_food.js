@@ -111,8 +111,8 @@ let Ans_chk = 1; // 알파벳 맞았는지 체크
 let Img_list = ['friedrice', 'kimbab', 'mlik','pork', 'raman', 'rice'];
 let Img_Arr = []; // 이미지 랜덤 인덱스 배열
 let ind = 0; // Img_list 인덱스
-let pos_t = [0, -4, -14, -20, -12, -17]; // 사진 위치
-let pos_r = [13, 7, 17, 6, -1, 12]; // 사진 위치
+let pos_t = [0, -4, -14, -23, -12, 5]; // 사진 위치
+let pos_r = [13, 3, 17, 6, -4, 23]; // 사진 위치
 let pos_ind = 0; // 위치 배열 인덱스
 
 checkLev();
@@ -319,8 +319,8 @@ function AddImg(){
     img.src = '../img/food_'+Img_list[Img_Arr[ind]]+'.png';
     img.id = 'food_img';
     img.style.position = 'absolute';
-    img.style.width = '500px';
-    img.style.height = '500px';
+    img.style.width = '600px';
+    img.style.height = '600px';
     img.style.top = pos_t[pos_ind]+'%';
     img.style.right = pos_r[pos_ind]+'%';
 
@@ -334,6 +334,7 @@ function AddImg(){
 }
 
 function gameOver(){
+    alert("정답은 "+list[wordCount]+"입니다");
     alert("🐧GameOver🐧");
     alert("🐧메인화면으로 넘어갑니다");
 
