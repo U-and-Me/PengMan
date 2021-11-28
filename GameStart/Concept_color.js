@@ -289,7 +289,9 @@ function checkAlpha(clicked_id){
         if(wordCount == 4){
             alert("다음 단계로 올라갑니다👩🏻‍🎨");
             RemoveInfo();
-        }else{
+        }else{// 다음 단어
+            var word_info = document.querySelector("#word_Info"); 
+            word_info.innerHTML += '<div style = "font-size:20px; margin-top:2%">'+list[wordCount]+'</div>';
             RemoveNextW();
         }
     }else{
