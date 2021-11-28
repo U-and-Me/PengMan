@@ -334,6 +334,7 @@ function AddImg(){
 }
 
 function gameOver(){
+    alert("정답은 "+list[wordCount]+"입니다");
     alert("🐧GameOver🐧");
     alert("🐧메인화면으로 넘어갑니다");
 
