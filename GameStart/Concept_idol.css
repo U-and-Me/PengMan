@@ -29,12 +29,13 @@ body{
     top: 5%;
 }
 /*아이돌그림판*/
+
 #Idol{
     position: absolute;
     border-radius: 20px;
-    width: 40%;
-    margin-left: 54%;
-    margin-top: -53%;
+    width: 46%;
+    margin-left: 50%;
+    margin-top: -48%;
 }
 .warp{
     position: absolute;
