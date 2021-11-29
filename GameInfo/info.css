@@ -8,6 +8,9 @@ body{
     width: 100vw;
     height: 100vh;
 }
+#info{
+    top: -7%;
+}
 #wrapper{
     position: absolute;
 }
