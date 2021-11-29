@@ -66,7 +66,7 @@ body{
     margin-left: 45px;
    
 }
-#word_Info{
+ #word_Info{
     position: absolute;
     background-color: rgba(255, 255, 255, 0.5);
     width: 20%;
@@ -79,4 +79,4 @@ body{
     color: #0d0624;
     text-align: center;
     padding-top: 1%;
-}
+} 
