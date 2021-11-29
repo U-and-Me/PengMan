@@ -155,7 +155,6 @@ function RemoveInfo(){
 // 다음 단어 넘어가기 전 초기화
 function RemoveNextW(){
     // 밑줄 삭제
-    //alert("다음단계");
     var line = document.querySelector("#word_line");
     while(line.hasChildNodes()){
         line.removeChild(line.firstChild);
@@ -175,8 +174,6 @@ function RemoveNextW(){
     Ans_chk = 1;
     ind = 0;
     pos_ind = 0;
-
-    //console.log(list_right+ "   " + Arr_word + "   " + wordCount + "   " + imgAdd + "    " + Ans_Right + "   " + Ans_chk);
 
     playGame();
 }
@@ -263,15 +260,12 @@ function checkAlpha(clicked_id){
     alpha = alpha.toLowerCase(); // 소문자로 변경
 
     let word_len = list[wordCount].length; // 현재 단어 길이
-
-    //alert(list[wordCount]);
         
     var line = document.querySelector("#word_line"); 
 
     for(let i = 0; i < word_len; i++){
         if(alpha == Arr_word[i]){ // 맞을 경우 밑줄 제거 후 알파벳 출력
             Ans_Right++;
-           // alert(alpha + "  " + Arr_word[i]);
             list_right[i] = Arr_word[i];
             Ans_chk = 0;
         }
@@ -313,7 +307,6 @@ function checkAlpha(clicked_id){
                 // 그림 추가
                 imgAdd++;
                 AddImg();
-                //alert(Lev_Img[cur_level-1] + "   " + imgAdd);
             }
         }
     }

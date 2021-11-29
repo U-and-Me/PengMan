@@ -278,7 +278,6 @@ function checkAlpha(clicked_id){
     for(let i = 0; i < word_len; i++){
         if(alpha == Arr_word[i]){ // 맞을 경우 밑줄 제거 후 알파벳 출력
             Ans_Right++;
-           // alert(alpha + "  " + Arr_word[i]);
             list_right[i] = Arr_word[i];
             Ans_chk = 0;
         }
@@ -320,7 +319,6 @@ function checkAlpha(clicked_id){
                 // 그림 추가
                 imgAdd++;
                 AddImg();
-                //alert(Lev_Img[cur_level-1] + "   " + imgAdd);
             }
         }
     }
@@ -342,8 +340,6 @@ function AddImg(){
     var back = document.querySelector("#back_img");
     back.appendChild(img);
 
-    //console.log('../img/animal_'+Img_list[Img_Arr[ind]]+'.png' + "        " + Img_list[Img_Arr[ind]] + "       " +Img_Arr[ind] + "  " +ind);
-
     ind++;
     pos_ind++;
 }
@@ -354,7 +350,6 @@ function gameOver(){
     alert("🐧메인화면으로 넘어갑니다");
 
     // index.html로 돌아가기
-    
     var link = '../index.html';
     location.href = link;
     location.replace(link);
