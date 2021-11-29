@@ -37,11 +37,3 @@ body{
 #img-help:hover{
     transform: scale(1.1);
 }
-#audio {
-    position: absolute;
-    left: 80%;
-}
-
-/* audio{
-    display: none !important;
-} */
