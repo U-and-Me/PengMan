@@ -146,6 +146,15 @@ function RemoveInfo(){
     var span = document.getElementById("span");
     span.innerHTML = "음식-"+cur_level+"단계";
 
+    // 맞춘 단어 제거
+    var word_info = document.querySelector("#word_Info"); 
+    while(word_info.hasChildNodes()){
+        word_info.removeChild(word_info.firstChild);
+    }
+
+    var word_info = document.querySelector("#word_Info");
+    word_info.innerHTML += '<div style = "font-size:25px; font-weight: bold; color: #0d0624; text-align: center; padding-top: 1%;">맞춘 단어</div>';
+
     checkLev();
 }
 
