@@ -9,6 +9,7 @@
 
 <h3> 관련 자료 </h3>
 [PengMan 기획서]<br>
-[Uploading PengMan 기획서.hwp…]() <br>
+(https://github.com/U-and-Me/PengMan/files/7622443/PengMan.pdf)
+<br><br>
 [PengMan 발표자료]<br>
 (https://github.com/U-and-Me/PengMan/files/7622414/PengMan.pptx)
