@@ -13,3 +13,8 @@
 <br><br>
 [PengMan 발표자료]<br>
 (https://github.com/U-and-Me/PengMan/files/7664337/PengMan.pdf)
+
+<br><br>
+<h3> MEMBER </h3>
+김유나 - 기획, HTML/CSS/JS 개발
+이채은 - 기획, HTML/CSS 개발, 디자인
